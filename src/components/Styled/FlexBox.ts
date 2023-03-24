@@ -34,4 +34,7 @@ export const FlexBox = styled.div<{
   align-items: ${(p) => p.alignItems ?? "center"};
   justify-content: ${(p) => p.justifyContent ?? "space-between"};
   flex-direction: ${(p) => p.flexDirection ?? undefined};
+  list-style: none;
+  margin: 0;
+  padding: 0;
 `;

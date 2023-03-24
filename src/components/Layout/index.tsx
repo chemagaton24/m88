@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import GlobalStyle from "../Styled/GlobalStyles";
+import { GlobalStyle } from "../Styled/GlobalStyles";
+import Announcement from "./Announcement";
 import Header from "./Header";
 
 const index = () => {
@@ -8,6 +9,7 @@ const index = () => {
     <>
       <GlobalStyle />
       <Header />
+      <Announcement />
       <Outlet />
     </>
   );

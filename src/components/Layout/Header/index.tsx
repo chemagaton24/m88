@@ -1,6 +1,6 @@
 import { Button, FlexBox, InnerBox } from "../../Styled/GlobalStyles";
 import Logo from "./Logo";
-import { BottomRow, Header, TopRow } from "./Styled";
+import { BottomRow, Header, Navbar, TopRow } from "./Styled";
 
 const Index = () => {
   return (
@@ -17,7 +17,9 @@ const Index = () => {
         </InnerBox>
       </TopRow>
       <BottomRow>
-        <InnerBox>asdasd</InnerBox>
+        <InnerBox className="h-100">
+          <Navbar />
+        </InnerBox>
       </BottomRow>
     </Header>
   );

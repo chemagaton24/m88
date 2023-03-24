@@ -1,6 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Button = styled.button<{ styleTheme?: "transparent" }>`
+const sizes = {
+  default: css`
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  `,
+};
+
+const styleThemes = {
+  default: css`
+    background-color: #ffcd00;
+    color: #1a2332;
+  `,
+  transparent: css`
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+  `,
+};
+
+export const Button = styled.button<{
+  size?: "default";
+  styleTheme?: "default" | "transparent";
+}>`
   background-color: #ffcd00;
   border-radius: 2px;
   color: #1a2332;
@@ -10,16 +33,12 @@ export const Button = styled.button<{ styleTheme?: "transparent" }>`
   box-sizing: border-box;
   border: 0;
   width: auto;
-  height: 40px;
-  line-height: 40px;
   padding: 0 16px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  ${({ size }) => (size ? sizes[size] : sizes["default"])}
 
   ${({ styleTheme }) =>
-    styleTheme === "transparent" &&
-    `
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-  `}
+    styleTheme ? styleThemes[styleTheme] : styleThemes["default"]}
 `;

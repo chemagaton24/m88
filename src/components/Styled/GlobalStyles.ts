@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Button as ButtonSX } from "./Button";
 import { FlexBox as FlexBoxSX } from "./FlexBox";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     html, body {
         width: 100%;
         height: 100%;
@@ -45,5 +45,3 @@ export const InnerBox = styled.div`
 export const Button = styled(ButtonSX)``;
 
 export const FlexBox = styled(FlexBoxSX)``;
-
-export default GlobalStyle;
