@@ -30,8 +30,8 @@ const Slider = () => {
   };
   return (
     <SliderSX {...settings}>
-      {sliderList.map((item) => (
-        <SlideItem>
+      {sliderList.map((item, key) => (
+        <SlideItem key={key}>
           <SlideBG src={Slide1} />
           <SlideContent>
             <InnerBox className="h-100">

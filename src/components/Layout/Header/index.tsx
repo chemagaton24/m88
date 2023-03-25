@@ -1,10 +1,10 @@
 import { Button, FlexBox, InnerBox } from "../../Styled/GlobalStyles";
 import Logo from "./Logo";
-import { BottomRow, Header, Navbar, TopRow } from "./Styled";
+import { BottomRow, Header as HeaderSX, Navbar, TopRow } from "./Styled";
 
-const Index = () => {
+const Header = () => {
   return (
-    <Header>
+    <HeaderSX>
       <TopRow>
         <InnerBox className="h-100">
           <FlexBox className="h-100">
@@ -21,8 +21,8 @@ const Index = () => {
           <Navbar />
         </InnerBox>
       </BottomRow>
-    </Header>
+    </HeaderSX>
   );
 };
 
-export default Index;
+export default Header;

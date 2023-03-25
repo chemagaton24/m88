@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import SliderSX from "react-slick";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Slider = styled(SliderSX)`
   background-color: #0d111a;
@@ -19,7 +20,7 @@ export const SlideItem = styled.div`
   vertical-align: top;
 `;
 
-export const SlideBG = styled.img`
+export const SlideBG = styled(LazyLoadImage)`
   margin: 0 auto;
 `;
 

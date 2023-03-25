@@ -2,6 +2,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Button as ButtonSX } from "./Button";
 import { FlexBox as FlexBoxSX } from "./FlexBox";
+import { marginBottomCSS } from "./Margin";
 
 export const GlobalStyle = createGlobalStyle`
     html, body {
@@ -18,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
         color: #FFF;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
-        line-height: 24px;
         overflow-x: hidden;
     }
     img {
@@ -32,6 +32,8 @@ export const GlobalStyle = createGlobalStyle`
     .h-100 {
         height: 100%;
     }
+
+    ${marginBottomCSS}
 `;
 
 export const InnerBox = styled.div`

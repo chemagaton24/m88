@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const FlexBox = styled.div<{
-  gap?: 4 | 8 | 12 | 16 | 18 | 24;
+  gap?: 4 | 8 | 12 | 16 | 18 | 24 | 32 | 48;
+  flexDisplay?: "flex" | "inline-flex";
   alignItems?:
     | "normal"
     | "stretch"
@@ -28,12 +29,14 @@ export const FlexBox = styled.div<{
     | "space-evenly"
     | "initial"
     | "inherit";
+  flexWrap?: "nowrap" | "wrap" | "wrap-reverse" | "initial" | "inherit";
 }>`
-  display: flex;
+  display: ${(p) => p.flexDisplay ?? "flex"};
   gap: ${(p) => p.gap}px;
   align-items: ${(p) => p.alignItems ?? "center"};
   justify-content: ${(p) => p.justifyContent ?? "space-between"};
   flex-direction: ${(p) => p.flexDirection ?? undefined};
+  flex-wrap: ${(p) => p.flexWrap ?? undefined};
   list-style: none;
   margin: 0;
   padding: 0;
