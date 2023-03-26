@@ -1,7 +1,9 @@
 import Slider from "../components/features/Slider";
 import Steps from "../components/features/Steps";
-import Snippet from "../components/features/Sportsbook/Snippet";
+import SportsbookSnippet from "../components/features/Sportsbook/Snippet";
+import CasinoSnippet from "../components/features/Casino/Snippet";
 import { InnerBox, MainContainer } from "../components/Styled/GlobalStyles";
+import DownloadAppBanner from "../components/features/DownloadApp/DownloadAppBanner";
 
 const Home = () => {
   return (
@@ -10,7 +12,9 @@ const Home = () => {
       <Steps />
       <MainContainer>
         <InnerBox>
-          <Snippet />
+          <SportsbookSnippet />
+          <CasinoSnippet />
+          <DownloadAppBanner />
         </InnerBox>
       </MainContainer>
     </div>

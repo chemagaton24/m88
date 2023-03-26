@@ -5,6 +5,7 @@ export const Header = styled.header`
   background-color: #1a2332;
   transition: height 0.3s;
   height: 144px;
+  color: ${(p) => p.theme.dark.textColor};
 `;
 
 export const TopRow = styled.div<{ gap?: "8" }>`
@@ -33,7 +34,7 @@ export const Navbar = styled(NavbarSX)`
       a {
         font-size: 14px;
         text-transform: uppercase;
-        color: #fff;
+        color: ${(p) => p.theme.dark.textColor};
         font-weight: 800;
         text-decoration: none;
 

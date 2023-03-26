@@ -46,7 +46,9 @@ export const FlexBox = styled.div<{
     stretch &&
     `
     > * {
-      width: 100%;
+      flex-grow: 1;
     }
   `};
 `;
+
+export const FlexCol = styled.div``;

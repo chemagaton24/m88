@@ -1,6 +1,7 @@
 import { FlexBox } from "../../Styled/FlexBox";
 import { InnerBox } from "../../Styled/GlobalStyles";
 import CasinoProviders from "./CasinoProviders";
+import Copyright from "./Copyright";
 import FootballClubs from "./FootballClubs";
 import M88Locales from "./M88Locales";
 import Navbar from "./Navbar";
@@ -25,7 +26,10 @@ const Footer = () => (
         <CasinoProviders />
       </BorderedRow>
       <BorderedRow className="row-3 casino-providers">
-        <FootballClubs />
+        <FlexBox className="m-b-42">
+          <FootballClubs />
+        </FlexBox>
+        <Copyright />
       </BorderedRow>
     </InnerBox>
   </FooterSX>

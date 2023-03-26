@@ -45,7 +45,7 @@ export const InnerBox = styled.div`
 `;
 
 export const MainContainer = styled.main`
-  padding: 48px;
+  padding: 48px 0;
 `;
 
 export const Button = styled(ButtonSX)``;

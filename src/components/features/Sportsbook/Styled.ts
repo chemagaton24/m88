@@ -2,6 +2,20 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import { FlexBox } from "../../Styled/FlexBox";
 
+export const SnippetGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+`;
+
+export const GridItem1 = styled.div`
+  grid-column: span 2;
+`;
+
+export const GridItem2 = styled.div`
+  grid-column: span 4;
+`;
+
 export const Card = styled.div`
   aspect-ratio: 654 / 311;
   width: 100%;

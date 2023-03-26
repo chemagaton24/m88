@@ -1,8 +1,12 @@
 import Marquee from "react-fast-marquee";
 import { AnnouncementType } from "../../../types/accountment";
-import { FlexBox } from "../../Styled/FlexBox";
+import { FlexBox, FlexCol } from "../../Styled/FlexBox";
 import { InnerBox } from "../../Styled/GlobalStyles";
-import { AnnounceItem, Announcement as AnnouncementSX } from "./Styled";
+import {
+  AnnounceItem,
+  Announcement as AnnouncementSX,
+  DateTime,
+} from "./Styled";
 
 const Announcement = () => {
   const settings = {
@@ -31,26 +35,31 @@ const Announcement = () => {
   return (
     <AnnouncementSX>
       <InnerBox className="h-100">
-        <Marquee {...settings} className="h-100">
-          {announcementList.map((item, key) => {
-            return Array.isArray(item.announcement) ? (
-              <AnnounceItem tag={item.tag} key={key}>
-                <FlexBox gap={8}>
-                  <span>{item.label}</span>
-                  <FlexBox as="ul" gap={8}>
-                    {item.announcement.map((item2, key2) => (
-                      <li key={key2}>{item2}</li>
-                    ))}
+        <FlexBox gap={16} className="h-100">
+          <FlexCol>
+            <DateTime>26/03/2023 12:05 (GMT+8)</DateTime>
+          </FlexCol>
+          <Marquee {...settings} className="h-100">
+            {announcementList.map((item, key) => {
+              return Array.isArray(item.announcement) ? (
+                <AnnounceItem tag={item.tag} key={key}>
+                  <FlexBox gap={8}>
+                    <span>{item.label}</span>
+                    <FlexBox as="ul" gap={8}>
+                      {item.announcement.map((item2, key2) => (
+                        <li key={key2}>{item2}</li>
+                      ))}
+                    </FlexBox>
                   </FlexBox>
-                </FlexBox>
-              </AnnounceItem>
-            ) : (
-              <AnnounceItem tag={item.tag} key={key}>
-                {item.announcement}
-              </AnnounceItem>
-            );
-          })}
-        </Marquee>
+                </AnnounceItem>
+              ) : (
+                <AnnounceItem tag={item.tag} key={key}>
+                  {item.announcement}
+                </AnnounceItem>
+              );
+            })}
+          </Marquee>
+        </FlexBox>
       </InnerBox>
     </AnnouncementSX>
   );
