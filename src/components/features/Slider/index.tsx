@@ -19,35 +19,36 @@ const sliderList = [
   },
 ];
 
-const Slider = () => {
-  let settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-  return (
-    <SliderSX {...settings}>
-      {sliderList.map((item, key) => (
-        <SlideItem key={key}>
-          <SlideBG src={Slide1} />
-          <SlideContent>
-            <InnerBox className="h-100">
-              <FlexBox justifyContent="flex-end" className="h-100">
-                <div className="inner">
-                  <h3>{item.largeText}</h3>
-                  <p>{item.smallText}</p>
-                  <Button>Play Now</Button>
-                </div>
-              </FlexBox>
-            </InnerBox>
-          </SlideContent>
-        </SlideItem>
-      ))}
-    </SliderSX>
-  );
+const settings = {
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 6000,
 };
+
+const Slider = () => (
+  <SliderSX {...settings}>
+    {sliderList.map((item, key) => (
+      <SlideItem key={key}>
+        <SlideBG src={Slide1} />
+        <SlideContent>
+          <InnerBox className="h-100">
+            <FlexBox justifyContent="flex-end" className="h-100">
+              <div className="inner">
+                <h3>{item.largeText}</h3>
+                <p>{item.smallText}</p>
+                <Button>Play Now</Button>
+              </div>
+            </FlexBox>
+          </InnerBox>
+        </SlideContent>
+      </SlideItem>
+    ))}
+  </SliderSX>
+);
 
 export default Slider;

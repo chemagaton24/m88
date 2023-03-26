@@ -6,6 +6,11 @@ const sizes = {
     line-height: 40px;
     font-size: 14px;
   `,
+  large: css`
+    height: 48px;
+    line-height: 48px;
+    font-size: 20px;
+  `,
 };
 
 const styleThemes = {
@@ -21,7 +26,7 @@ const styleThemes = {
 };
 
 export const Button = styled.button<{
-  size?: "default";
+  size?: "default" | "large";
   styleTheme?: "default" | "transparent";
 }>`
   background-color: #ffcd00;

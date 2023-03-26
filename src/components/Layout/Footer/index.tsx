@@ -24,7 +24,7 @@ const Footer = () => (
       <BorderedRow className="row-2 casino-providers">
         <CasinoProviders />
       </BorderedRow>
-      <BorderedRow className="row-2 casino-providers">
+      <BorderedRow className="row-3 casino-providers">
         <FootballClubs />
       </BorderedRow>
     </InnerBox>

@@ -5,7 +5,6 @@ export const Steps = styled.div`
   line-height: 96px;
   background-color: #26324d;
   overflow: hidden;
-  margin-bottom: 13px;
 `;
 
 export const Step = styled.div`

@@ -30,6 +30,7 @@ export const FlexBox = styled.div<{
     | "initial"
     | "inherit";
   flexWrap?: "nowrap" | "wrap" | "wrap-reverse" | "initial" | "inherit";
+  stretch?: boolean;
 }>`
   display: ${(p) => p.flexDisplay ?? "flex"};
   gap: ${(p) => p.gap}px;
@@ -40,4 +41,12 @@ export const FlexBox = styled.div<{
   list-style: none;
   margin: 0;
   padding: 0;
+
+  ${({ stretch }) =>
+    stretch &&
+    `
+    > * {
+      width: 100%;
+    }
+  `};
 `;

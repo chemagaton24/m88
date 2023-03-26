@@ -19,6 +19,10 @@ export const Footer = styled.footer`
     padding: 32px 0;
   }
 
+  .row-3 {
+    padding-top: 32px;
+  }
+
   .casino-providers {
     img {
       height: 40px;

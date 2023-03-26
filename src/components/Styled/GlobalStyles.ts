@@ -44,6 +44,10 @@ export const InnerBox = styled.div`
   box-sizing: border-box;
 `;
 
+export const MainContainer = styled.main`
+  padding: 48px;
+`;
+
 export const Button = styled(ButtonSX)``;
 
 export const FlexBox = styled(FlexBoxSX)``;
